@@ -5,13 +5,11 @@ class Solution {
 
         for(int i=0; i<n; i++){
             if( nums[i] != 0 ){
-                nums[pos]  = nums[i];
+                int temp = nums[i];
+                nums[i] = nums[pos];
+                nums[pos] = temp;
                 pos++;
             }
-        }
-
-        for(int i=pos; i<n; i++){
-            nums[i] = 0;
         }
     }
 }
